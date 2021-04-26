@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+#from django.utils import timezone
 
 # Create your models here.
 class Article(models.Model):
@@ -30,7 +31,7 @@ class Comment(models.Model):
     active = models.BooleanField(default=True)
     
     class Meta:
-        ordering =['created_on']
+        ordering =['created_on'] 
         
         
     def __str__(self):
