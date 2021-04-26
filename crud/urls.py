@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from articles import views as article_views
-from django.db import OperationalError, ProgrammingError
+#from django.db import OperationalError, ProgrammingError
 
 
 #from django.contrib.staticfiles.urls import staticfiles
