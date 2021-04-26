@@ -16,14 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from articles import views as article_views
+from django.db import OperationalError, ProgrammingError
+
 
 #from django.contrib.staticfiles.urls import staticfiles
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('myblogs.urls')),
-    path('articles/',include('articles.urls')),
+    path('',include('articles.urls')),
+    #path('articles/',include('articles.urls')),
     path('accounts/',include('accounts.urls')),
     path('users/', include('users.urls', namespace='users')),
     #path('', include('articles.urls'))
